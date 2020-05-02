@@ -1,0 +1,138 @@
+:root{
+    --generalColorBackground: #f4f4f4;
+    --whiteColor:#fff;
+    --darkColor: #343a40;
+    --darkColorTransparent: rgba(52,58,64,.5);
+    --greenJungle:#59932b;
+    --greenJungleTrasnparent:rgba(89,147,43,.5);
+
+}
+
+body{
+    font: 15px Arial, Helvertica, sans serif;
+    padding: 0;
+    margin:0;
+    background-color: var(--generalColorBackground);
+}
+
+.contenedor{
+    width: 80%;
+    overflow: hidden;
+    margin:auto;
+}
+
+.actual{
+    color: var(--greenJungle);
+}
+
+header{
+    background-color: var(--darkColor);
+    font-weight:bold;
+    color: var(--whiteColor);
+    text-transform: uppercase;
+}
+
+#navegadores{
+    float: left;
+}
+
+header #navegadores img{
+    float: left;
+    height: 60px;
+}
+
+header nav{
+    float: left;
+    padding-top: 5px;
+}
+
+header ul{
+    float: left;
+    list-style: none;
+}
+
+header li{
+    float: left;
+    margin-top: 0;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--whiteColor);
+    padding: 22px 20px 18px 20px;
+}
+
+header nav li a:hover{
+    background-color: var(--greenJungleTrasnparent);
+    box-shadow: 0px 5px var(--greenJungle);
+    color: var(--whiteColor);
+}
+
+#controles{
+    float: right;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+#controles a{
+    text-decoration: none;
+    color: var(--whiteColor);
+    margin: 5px 10px 0 0;
+    border:2px solid var(--greenJungle);
+    border-radius: 5px;
+    padding: 10px 20px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+#controles a:hover{
+    background-color: rgba(89,147,43,.5);
+}
+
+#controles img{
+    float: right;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+#controles form{
+    float: left;
+    margin:10px 20px 0 0;
+}
+
+#controles form button{
+    color: var(--whiteColor);
+    background-color: var(--greenJungle);
+    border: none;
+    border-bottom-right-radius: 5px ;
+    border-top-right-radius: 5px ;
+    height: 27px;
+}
+
+#controles form input{
+    width: 250px;
+    height: 23px;
+    font-size: 15px;
+    border: none;
+    border-bottom-left-radius: 5px ;
+    border-top-left-radius: 5px ;
+}
+
+#banner{
+    min-height: 500px;
+    background: url("../images/Stars.jpg") no-repeat -200px -100px;
+}
+
+#banner img{
+    height: 350px;
+    display: block;
+    padding-top: 70px;
+    margin: auto;
+}
+.background_black{
+    color: var(--whiteColor);
+    background-color: var(--darkColor);
+}
+
