@@ -108,12 +108,13 @@ header nav li a:hover{
     border: none;
     border-bottom-right-radius: 5px ;
     border-top-right-radius: 5px ;
-    height: 27px;
+    height: 28px;
 }
 
 #controles form input{
     width: 250px;
     height: 23px;
+    padding-left: 10px;
     font-size: 15px;
     border: none;
     border-bottom-left-radius: 5px ;
@@ -121,18 +122,122 @@ header nav li a:hover{
 }
 
 #banner{
-    min-height: 500px;
-    background: url("../images/Stars.jpg") no-repeat -200px -100px;
+    min-height: 550px;
+    background-image: url("../images/Stars.jpg");
+    /*no-repeat -200px -100px;*/
+    background-attachment: fixed;
 }
 
 #banner img{
     height: 350px;
     display: block;
-    padding-top: 70px;
+    padding-top: 95px;
     margin: auto;
+}
+
+#prueba{
+    min-height: 500px;
+    background-image: url("../images/bears.png");
+    /*no-repeat -200px -100px;*/
+    background-attachment: fixed;
+}
+
+.explorar{
+    padding: 30px 0 30px 0;
+    background-color: var(--darkColor);
+    color: var(--whiteColor);
+}
+
+.explorar h1{
+    text-transform: uppercase;
+}
+
+.explorar form{
+    margin: 20px 0 20px 0;
+}
+
+.explorar form input{
+    width: 75%;
+    border-radius: 5px;
+    padding:10px;
+    border:none;
+    background-color: var(--greenJungleTrasnparent);
+    height: 30px;
+    font-size: 20px;
+    color:var(--whiteColor);
+}
+
+.explorar form button{
+    width: 20%;
+    border-radius: 5px;
+    border:none;
+    color: var(--whiteColor);
+    height: 50px;
+    font-size: 20px;
+
+    background-color: var(--greenJungle);
+}
+
+#nosotros{
+    padding: 20px 0 20px 0;
+    margin: auto;
+}
+
+#descripcionGami{
+    float: left;
+    width: 60%;
+    margin-top: 70px;
+}
+
+#nosotros img{
+    width: 30%;
+    float: right;
+}
+
+#cajaMisionVision{
+    padding: 50px 0 50px 0;
+    background-image: url("/images/Stars.jpg");
+    background-attachment: fixed;
+}
+
+#cajaMisionVision .caja{
+    float: inside;
+    text-align: center;
+    width: 50%;
+    padding: 40px;
+    margin: auto;
+    border-radius: 5px;
+    background-color: var(--darkColorTransparent);
+    color: var(--whiteColor);
+}
+
+#cajaMisionVision h1, #cajaMisionVision p{
+    margin-bottom: 40px;
+}
+
+#cajas{
+    margin-top: 20px;
+}
+
+#cajas .caja{
+    float: left;
+    text-align: center;
+    width: 30%;
+    padding: 10px;
+}
+
+#cajas .caja img{
+    width: 90px;
 }
 .background_black{
     color: var(--whiteColor);
     background-color: var(--darkColor);
 }
 
+footer{
+    text-align: center;
+    color: var(--whiteColor);
+    padding: 25px;
+    font-weight: bold;
+    background-color: var(--darkColor);
+}
