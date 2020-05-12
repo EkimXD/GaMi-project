@@ -10,6 +10,18 @@ export class AppController {
     return this.appService.getHello();
   }
 
+  @Get('ingresar')
+  ingresar(
+      @Res()res,
+  ){
+    let locals={
+      title:"GaMi"
+    }
+    res.render(
+        'rutas/ingresar/ingresar',
+        locals
+    )
+  }
   @Get('index')
   index(
       @Res()res,
@@ -37,10 +49,27 @@ export class AppController {
   @Get('loggout-aux')
   loggout(
     @Session()session,
-    @Req()req
+    @Req()req,
+    @Res()res,
   ) {
     session.usuario = undefined;
     req.session.destroy();
-    return 'Deslogueado';
+    let locals={
+      title:"GaMi",
+      session,
+    }
+    res.render('index',locals);
+  }
+
+  @Get('index-aux')
+  index_aux(
+      @Res() res,
+      @Session()session,
+  ){
+    let locals={
+      title:"GaMi",
+      session,
+    }
+    res.render('index-aux/index',locals)
   }
 }

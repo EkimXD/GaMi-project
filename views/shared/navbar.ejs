@@ -12,14 +12,20 @@
         </div>
         <div id="controles">
             <% if(session.usuario !== undefined){ %>
-                <img class="bar_element_right bar_element_image" src=<%= session.usuario.photo %>>
+                <div id="usuario-image">
+                    <img class="bar_element_right bar_element_image" src=<%= session.usuario.photo %>>
+                    <ul>
+                        <li><a href="#">Configuracion</a></li>
+                        <li><a href="loggout-aux">Cerrar sesion</a></li>
+                    </ul>
+                </div>
                 <form action="submit">
                     <input type="text" placeholder="Buscar">
                     <button>Ir</button>
                 </form>
             <% }else { %>
                 <a href="#">Registrarse</a>
-                <a href="#">Ingresar</a>
+                <a href="ingresar">Ingresar</a>
             <% } %>
         </div>
     </div>

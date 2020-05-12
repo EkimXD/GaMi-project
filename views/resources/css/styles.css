@@ -1,57 +1,57 @@
-:root{
+:root {
     --generalColorBackground: #f4f4f4;
-    --whiteColor:#fff;
+    --whiteColor: #fff;
     --darkColor: #343a40;
-    --darkColorTransparent: rgba(52,58,64,.5);
-    --greenJungle:#59932b;
-    --greenJungleTrasnparent:rgba(89,147,43,.5);
+    --darkColorTransparent: rgba(52, 58, 64, .5);
+    --greenJungle: #59932b;
+    --greenJungleTrasnparent: rgba(89, 147, 43, .5);
 
 }
 
-body{
+body {
     font: 15px Arial, Helvertica, sans serif;
     padding: 0;
-    margin:0;
+    margin: 0;
     background-color: var(--generalColorBackground);
 }
 
-.contenedor{
+.contenedor {
     width: 80%;
     overflow: hidden;
-    margin:auto;
+    margin: auto;
 }
 
-.actual{
+.actual {
     color: var(--greenJungle);
 }
 
-header{
+header {
     background-color: var(--darkColor);
-    font-weight:bold;
+    font-weight: bold;
     color: var(--whiteColor);
     text-transform: uppercase;
 }
 
-#navegadores{
+#navegadores {
     float: left;
 }
 
-header #navegadores img{
+header #navegadores img {
     float: left;
     height: 60px;
 }
 
-header nav{
+header nav {
     float: left;
     padding-top: 5px;
 }
 
-header ul{
+header ul {
     float: left;
     list-style: none;
 }
 
-header li{
+header li {
     float: left;
     margin-top: 0;
 }
@@ -62,115 +62,183 @@ header nav a {
     padding: 22px 20px 18px 20px;
 }
 
-header nav li a:hover{
+header nav li a:hover {
     background-color: var(--greenJungleTrasnparent);
     box-shadow: 0px 5px var(--greenJungle);
     color: var(--whiteColor);
 }
 
-#controles{
+#controles {
     float: right;
     font-weight: bold;
     text-transform: uppercase;
     margin-top: 5px;
 }
 
-#controles a{
+#controles > a {
     text-decoration: none;
     color: var(--whiteColor);
     margin: 5px 10px 0 0;
-    border:2px solid var(--greenJungle);
+    border: 2px solid var(--greenJungle);
     border-radius: 5px;
     padding: 10px 20px;
-    vertical-align: middle;
     display: inline-block;
 }
 
-#controles a:hover{
-    background-color: rgba(89,147,43,.5);
+#controles > a:hover {
+    background-color: rgba(89, 147, 43, .5);
 }
 
-#controles img{
+#usuario-image {
     float: right;
+}
+
+#usuario-image img {
     height: 50px;
     width: 50px;
     border-radius: 50%;
 }
 
-#controles form{
-    float: left;
-    margin:10px 20px 0 0;
+#usuario-image:hover>ul {
+    display: block;
 }
 
-#controles form button{
+#usuario-image ul {
+    display: none;
+    float: none;
+    position: absolute;
+    top:40px;
+    right: 120px;
+    text-decoration: none;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: var(--darkColor);
+    border: 2px solid var(--greenJungle);
+    padding: 0;
+}
+
+#usuario-image li {
+    float: none;
+    margin: auto;
+    display: block;
+    padding: 10px 0 10px 0;
+}
+
+#usuario-image a {
+    text-decoration: none;
+    color: var(--whiteColor);
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px ;
+}
+
+#usuario-image a:hover{
+    background-color: var(--greenJungleTrasnparent);
+}
+
+
+/*#usuario-image ul{*/
+/*    !*display: none;*!*/
+/*    text-decoration: none;*/
+/*    position: relative;*/
+/*    background-color: var(--darkColor);*/
+/*    border-radius: 5px;*/
+/*    border: 2px solid var(--greenJungle);*/
+/*    width: 200px;*/
+/*    box-sizing: border-box;*/
+/*    left: 60px;*/
+/*    top: 50px;*/
+/*}*/
+
+/*#usuario-image ul li{*/
+/*    width: 100%;*/
+/*    height: 20px;*/
+/*}*/
+
+/*#usuario-image ul li a{*/
+/*    text-decoration: none;*/
+/*    color: var(--whiteColor);*/
+/*    padding: 10px 20px 10px 20px;*/
+/*}*/
+
+/*#usuario-image ul li a:hover{*/
+/*    background-color: var(--greenJungleTrasnparent);*/
+/*}*/
+
+#controles form {
+    float: left;
+    margin: 10px 20px 0 0;
+}
+
+#controles form button {
     color: var(--whiteColor);
     background-color: var(--greenJungle);
     border: none;
-    border-bottom-right-radius: 5px ;
-    border-top-right-radius: 5px ;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
     height: 28px;
+    /*right: 21px;*/
 }
 
-#controles form input{
+#controles form input {
     width: 250px;
     height: 23px;
     padding-left: 10px;
     font-size: 15px;
     border: none;
-    border-bottom-left-radius: 5px ;
-    border-top-left-radius: 5px ;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
-#banner{
+#banner {
     min-height: 550px;
     background-image: url("../images/Stars.jpg");
     /*no-repeat -200px -100px;*/
     background-attachment: fixed;
 }
 
-#banner img{
+#banner img {
     height: 350px;
     display: block;
     padding-top: 95px;
     margin: auto;
 }
 
-#prueba{
+#prueba {
     min-height: 500px;
     background-image: url("../images/bears.png");
     /*no-repeat -200px -100px;*/
     background-attachment: fixed;
 }
 
-.explorar{
+.explorar {
     padding: 30px 0 30px 0;
     background-color: var(--darkColor);
     color: var(--whiteColor);
 }
 
-.explorar h1{
+.explorar h1 {
     text-transform: uppercase;
 }
 
-.explorar form{
+.explorar form {
     margin: 20px 0 20px 0;
 }
 
-.explorar form input{
+.explorar form input {
     width: 75%;
     border-radius: 5px;
-    padding:10px;
-    border:none;
+    padding: 10px;
+    border: none;
     background-color: var(--greenJungleTrasnparent);
     height: 30px;
     font-size: 20px;
-    color:var(--whiteColor);
+    color: var(--whiteColor);
 }
 
-.explorar form button{
+.explorar form button {
     width: 20%;
     border-radius: 5px;
-    border:none;
+    border: none;
     color: var(--whiteColor);
     height: 50px;
     font-size: 20px;
@@ -178,29 +246,29 @@ header nav li a:hover{
     background-color: var(--greenJungle);
 }
 
-#nosotros{
+#nosotros {
     padding: 20px 0 20px 0;
     margin: auto;
 }
 
-#descripcionGami{
+#descripcionGami {
     float: left;
     width: 60%;
     margin-top: 70px;
 }
 
-#nosotros img{
+#nosotros img {
     width: 30%;
     float: right;
 }
 
-#cajaMisionVision{
+#cajaMisionVision {
     padding: 50px 0 50px 0;
     background-image: url("/images/Stars.jpg");
     background-attachment: fixed;
 }
 
-#cajaMisionVision .caja{
+#cajaMisionVision .caja {
     float: inside;
     text-align: center;
     width: 50%;
@@ -211,33 +279,39 @@ header nav li a:hover{
     color: var(--whiteColor);
 }
 
-#cajaMisionVision h1, #cajaMisionVision p{
+#cajaMisionVision h1, #cajaMisionVision p {
     margin-bottom: 40px;
+    font-size: 20px;
 }
 
-#cajas{
+#cajas {
     margin-top: 20px;
 }
 
-#cajas .caja{
+#cajas .caja {
     float: left;
     text-align: center;
     width: 30%;
     padding: 10px;
 }
 
-#cajas .caja img{
+#cajas .caja img {
     width: 90px;
 }
-.background_black{
+
+.background_black {
     color: var(--whiteColor);
     background-color: var(--darkColor);
 }
 
-footer{
+footer {
     text-align: center;
     color: var(--whiteColor);
     padding: 25px;
     font-weight: bold;
     background-color: var(--darkColor);
+}
+
+.form-group {
+    margin-bottom: 1rem
 }

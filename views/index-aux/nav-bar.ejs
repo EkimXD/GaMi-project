@@ -1,0 +1,33 @@
+<nav >
+    <span id="button-bar-movil" class="movil"><i class="fas fa-bars "></i></span>
+    <a href="#">
+        <img id="bar-icon" src="images/GaMicono.png" alt="Gami | Juntos seremos grandes">
+    </a>
+    <div class="sidebar">
+        <ul class="bar-left">
+            <% if(session.usuario !== undefined){
+            if(session.usuario.photo !== undefined || session.usuario.photo !== ""){ %>
+                <li>
+                    <img class="user-image movil" src="<%= session.usuario.photo %>" alt="Foto de usuario">
+                </li>
+            <% }
+            } %>
+            <li><a class="bar-selected" href="#">Inicio</a></li>
+            <li><a href="#">Explorar</a></li>
+            <li><a href="#">Nosotros</a></li>
+        </ul>
+        <ul class="bar-right">
+            <% if(session.usuario !== undefined){ %>
+                <li class="botton-sidebar"><a href="#">Configurar</a></li>
+                <li class="botton-sidebar"><a href="loggout-aux">Cerrar Sesion</a></li>
+            <% }else{ %>
+                <li><a class="btn" href="#">Registrarse</a></li>
+                <li><a class="btn" href="#">Iniciar Sesion</a></li>
+            <% } %>
+        </ul>
+    </div>
+    <form class="movil" action="">
+        <input id="search-input-bar" type="text">
+        <button><i class="fas fa-search"></i></button>
+    </form>
+</nav>
