@@ -5,6 +5,13 @@ function init() {
     const bar_movil_btn = document.getElementById('button-bar-movil');
     bar_movil_btn.addEventListener('click', showSidebar);
     setInterval(chageHeader, 15000);
+    scrollReveal();
+}
+
+function scrollReveal() {
+    ScrollReveal().reveal('.explorar', {delay: 500});
+    ScrollReveal().reveal('.nosotros', {delay: 500});
+    // ScrollReveal().reveal('.redes-sociales>a', {delay: 500});
 }
 
 function showSidebar() {
@@ -26,11 +33,11 @@ function resizeInput() {
     const input_bar = document.getElementById('search-input-bar');
     input_bar.style.width = "150px";
     input_bar.focus();
-    input_bar.addEventListener("focusout",()=>{
+    input_bar.addEventListener("focusout", () => {
         input_bar.style.width = "0";
     });
 }
 
 function barElementFocus() {
-    this.classList.toggle('bar-selected');
+    console.log('scrolled');
 }
