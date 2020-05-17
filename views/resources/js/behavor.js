@@ -6,6 +6,30 @@ function init() {
     bar_movil_btn.addEventListener('click', showSidebar);
     setInterval(chageHeader, 15000);
     scrollReveal();
+    window.addEventListener('scroll', scrollEvent);
+}
+
+function scrollEvent(e) {
+    const scroll_y=window.scrollY;
+    const header=document.getElementsByTagName('header').item(0).getBoundingClientRect();
+    const explorar=document.getElementById('explorar').getBoundingClientRect();
+    const nosotros=document.getElementById('nosotros').getBoundingClientRect();
+
+    const inicio_bar=document.getElementById('inicio-bar');
+    const explorar_bar=document.getElementById('explorar-bar');
+    const nosotros_bar=document.getElementById('nosotros-bar');
+
+    if(header.top-70<=scroll_y<header.bottom-70){
+        inicio_bar.classList.add('bar-selected');
+        explorar_bar.classList.remove('bar-selected');
+    }else if (explorar.top-70 <= scroll_y< explorar.bottom-70){
+        explorar_bar.classList.add('bar-selected');
+        inicio_bar.classList.remove('bar-selected');
+        nosotros_bar.classList.remove('bar-selected');
+    }else if(nosotros.top -70<= scroll_y < nosotros.bottom-70){
+        explorar_bar.classList.remove('bar-selected');
+        nosotros_bar.classList.add('bar-selected');
+    }
 }
 
 function scrollReveal() {
