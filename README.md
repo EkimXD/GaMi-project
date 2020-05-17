@@ -74,9 +74,9 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
   Nest is [MIT licensed](LICENSE).
   
-#GaMi Project
+# GaMi Project
 
 GaMi project is a folder for present projects from independent developers.
 
-![](image/foto2.jpeg)
+![Gami Project](images/foto2.jpeg)
 
