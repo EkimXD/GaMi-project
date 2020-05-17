@@ -1,3 +1,10 @@
+# GaMi Project
+
+GaMi project is a folder for present projects from independent developers.
+
+![Gami Project](images/foto2.jpeg)
+![Gami Project](images/foto1.jpeg)
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
@@ -73,3 +80,6 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
   Nest is [MIT licensed](LICENSE).
+  
+
+
