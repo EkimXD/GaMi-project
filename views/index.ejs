@@ -1,101 +1,56 @@
-<%- include ("shared/header.ejs") %>
-<section id="banner">
-    <div class="contenedor">
-        <img class="animated fadeIn" src="/images/GaMicono.png" alt="">
+<%- include ('shared/header.ejs') %>
+<%- include ('shared/nav-bar.ejs') %>
+<header>
+    <div class="header-imgs">
+        <img src="/images/GaMicono.png" alt="Gami | Juntos seremos grandes">
     </div>
-</section>
-
-<section class="explorar">
-    <div class="contenedor wow animated fadeIn">
+</header>
+<section id="explorar" class="explorar" onfocus="barElementFocus()">
+    <div class="contenedor">
         <h1>Explorar</h1>
-        <p>Encuentra a la persona o portafolio que estas buscando.</p>
+        <p>Encuentra aqui los protafolios que estas buscando</p>
         <form action="submit">
-            <input type="text" placeholder="Ingrese aqui un nombre o un portafolio">
-            <button>Buscar</button>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej: GaMi project"  required>
+            <button><i class="fas fa-search movil"></i></button>
         </form>
+        <h1>Categorias</h1>
+        <p>Encuentra aqui alguna categoria de tu preferencia.</p>
+        <div class="vitrina">
+            <div class="carta">
+                <img src="/images/mariadb.png" alt="aux">
+                <hr>
+                <h1>Lorem ipsum dolor.</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, aperiam?</p>
+                <a href="#" class="btn">Ver mas</a>
+            </div>
+            <div class="carta-more">
+                <a href="#">Ver mas <i class="fas fa-angle-double-right"></i></a>
+            </div>
+        </div>
     </div>
 </section>
-
-<section id="nosotros">
+<section id="nosotros" >
     <div class="contenedor">
-        <div id="descripcionGami" class="wow animated fadeInLeft">
-            <h1>Proyecto GaMi</h1>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.
-            </p>
+        <div class="nosotros">
+            <div>
+                <h1>Nosotros - GaMi</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam corporis facere iusto possimus repellendus saepe. Architecto autem enim esse ex itaque officiis placeat quasi voluptatem. Ad adipisci eos magni.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid asperiores, aspernatur at autem dicta ea eos error excepturi facere facilis id ipsa modi nostrum quia, repellat, reprehenderit sapiente tempore?</p>
+            </div>
+            <img src="/images/GaMicono.png" alt="Gami | Juntos seremos grandes">
         </div>
-            <img class="wow animated fadeIn" data-wow-delay="0.3s" src="/images/GaMicono.png" alt="Gami icono">
-
-    </div>
-</section>
-<section id="cajaMisionVision">
-    <div class="contenedor wow animated fadeIn" data-wow-delay="0.3s">
-        <div class="caja">
-            <h1>Mision</h1>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.
-            </p>
-            <h1>Vision</h1>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.
-            </p>
-        </div>
-
-    </div>
-</section>
-
-<section id="cajas">
-
-    <div class="contenedor wow animated fadeInUp" data-wow-delay="0.3s">
-        <h1>Tecnologias usadas</h1>
-        <div class="caja">
-            <img src="images/html5.png">
-            <h3>HTML5</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. </p>
-        </div>
-        <div class="caja">
-            <img src="images/css3.png">
-            <h3>CSS3</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. </p>
-        </div>
-        <div class="caja">
-            <img src="images/js.png">
-            <h3>JavaScript</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. </p>
-        </div>
-        <div class="caja">
-            <img src="images/nestjs.png">
-            <h3>Nestjs</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. </p>
-        </div>
-        <div class="caja">
-            <img src="images/mariadb.png">
-            <h3>MariaDB</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. </p>
-        </div>
-        <div class="caja">
-            <img src="images/ejs.png">
-            <h3>EJS</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. </p>
+        <div class="nosotros">
+            <img src="https://avatars3.githubusercontent.com/u/23347574?s=460&v=4" alt="Foto del desarrollador">
+            <div>
+                <h1>Miguel Aguilar (Desarrolador)</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda cumque dolorem dolorum eum eveniet excepturi ipsa iste maxime minima molestias neque nobis, quas quasi recusandae, repellendus saepe sequi sunt tempora vero! Accusamus commodi doloribus quasi quidem vel! Distinctio, tempore.</p>
+                <div class="redes-sociales">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
-<%- include ("shared/footer.ejs") %>
+<%- include ('shared/footer.ejs') %>
