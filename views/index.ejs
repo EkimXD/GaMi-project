@@ -1,4 +1,4 @@
-<%- include ('shared/header.ejs') %>
+<%- include ('shared/header.ejs',{estilos:['/css/estilos.css','https://fonts.googleapis.com/css2?family=Roboto&display=swap','https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'],scripts:['https://unpkg.com/scrollreveal','js/behavor.js']}) %>
 <%- include ('shared/nav-bar.ejs') %>
 <header>
     <div class="header-imgs">
@@ -10,7 +10,7 @@
         <h1>Explorar</h1>
         <p>Encuentra aqui los protafolios que estas buscando</p>
         <form action="submit">
-            <input type="text" id="nombre" name="nombre" placeholder="Ej: GaMi project"  required>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej: GaMi project" required>
             <button><i class="fas fa-search movil"></i></button>
         </form>
         <h1>Categorias</h1>
@@ -34,7 +34,11 @@
         <div class="nosotros">
             <div>
                 <h1>Nosotros - GaMi</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam corporis facere iusto possimus repellendus saepe. Architecto autem enim esse ex itaque officiis placeat quasi voluptatem. Ad adipisci eos magni.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid asperiores, aspernatur at autem dicta ea eos error excepturi facere facilis id ipsa modi nostrum quia, repellat, reprehenderit sapiente tempore?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam corporis facere iusto
+                    possimus repellendus saepe. Architecto autem enim esse ex itaque officiis placeat quasi voluptatem.
+                    Ad adipisci eos magni.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid
+                    asperiores, aspernatur at autem dicta ea eos error excepturi facere facilis id ipsa modi nostrum
+                    quia, repellat, reprehenderit sapiente tempore?</p>
             </div>
             <img src="/images/GaMicono.png" alt="Gami | Juntos seremos grandes">
         </div>
@@ -42,11 +46,16 @@
             <img src="https://avatars3.githubusercontent.com/u/23347574?s=460&v=4" alt="Foto del desarrollador">
             <div>
                 <h1>Miguel Aguilar (Desarrolador)</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda cumque dolorem dolorum eum eveniet excepturi ipsa iste maxime minima molestias neque nobis, quas quasi recusandae, repellendus saepe sequi sunt tempora vero! Accusamus commodi doloribus quasi quidem vel! Distinctio, tempore.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid assumenda cumque dolorem dolorum
+                    eum eveniet excepturi ipsa iste maxime minima molestias neque nobis, quas quasi recusandae,
+                    repellendus saepe sequi sunt tempora vero! Accusamus commodi doloribus quasi quidem vel! Distinctio,
+                    tempore.</p>
                 <div class="redes-sociales">
-                    <a href="https://www.facebook.com/miguelclemente.aguilardiaz" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.facebook.com/miguelclemente.aguilardiaz" target="_blank"><i
+                                class="fab fa-facebook"></i></a>
                     <a href="https://twitter.com/MiguelA21434971" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.youtube.com/channel/UCob17qxE0IXVKjMinWsBw3g?view_as=subscriber" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.youtube.com/channel/UCob17qxE0IXVKjMinWsBw3g?view_as=subscriber"
+                       target="_blank"><i class="fab fa-youtube"></i></a>
                     <a href="https://github.com/EkimXD" target="_blank"><i class="fab fa-github"></i></a>
                 </div>
             </div>
@@ -54,3 +63,4 @@
     </div>
 </section>
 <%- include ('shared/footer.ejs') %>
+<%- include ('shared/end-document.ejs') %>

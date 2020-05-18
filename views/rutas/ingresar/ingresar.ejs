@@ -1,11 +1,10 @@
-<%- include("../../shared/header-bar") %>
-<div id="ingreso">
-    <div class="contenedor">
-    <div class="caja">
-        <h1>Ingreso</h1>
+<%- include ('../../shared/header.ejs',{estilos:['/css/estilos-pagina.css','https://fonts.googleapis.com/css2?family=Roboto&display=swap'],scripts:[]}) %>
+<div class="full-size flex-full-center background-image-1">
+    <div class="card background-pattern-lines background-dark">
+        <h1 class="text-center">Ingreso</h1>
         <form action="submit">
             <div class="form-group">
-                <label for="correo">Correo</label>
+                <label for="correo">Correo:</label>
                 <input id="correo"
                        type="email"
                        name="correo"
@@ -13,21 +12,21 @@
                        title="Ingresar correo electronico"
                        class="form-control">
                 <small id="nombreIDHelp"
-                       class="form-text text-muted">
+                       class="text-muted">
                     Ingrese su correo electronico con el que esta registrado
                 </small>
             </div>
 
             <div class="form-group">
-                <label for="contrasena">Contrasena</label>
+                <label for="contrasena">Contraseña:</label>
                 <input id="contrasena"
                        type="password"
                        name="contrasena"
                        title="Ingresar su contrasena"
                        class="form-control">
                 <small id="nombreIDHelp"
-                       class="form-text text-muted">
-                    Ingrese su contrasena
+                       class="text-muted">
+                    Ingrese su contraseña
                 </small>
             </div>
             <button type="submit"
@@ -36,8 +35,6 @@
                 Ingresar
             </button>
         </form>
-
-    </div>
     </div>
 </div>
-<%- include("../../shared/footer-bar") %>
+<%- include ('../../shared/end-document.ejs') %>

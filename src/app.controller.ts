@@ -15,7 +15,7 @@ export class AppController {
       @Res()res,
   ){
     let locals={
-      title:"GaMi"
+      title:"GaMi - Ingreso"
     }
     res.render(
         'rutas/ingresar/ingresar',

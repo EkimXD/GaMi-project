@@ -12,9 +12,9 @@
                 </li>
             <% }
             } %>
-            <li><a id="inicio-bar" href="index">Inicio</a></li>
+            <li><a id="inicio-bar" href="index" class="bar-selected">Inicio</a></li>
             <li><a id="explorar-bar" href="#explorar">Explorar</a></li>
-            <li><a id="nosotros-bar" href="#">Nosotros</a></li>
+            <li><a id="nosotros-bar" href="#nosotros">Nosotros</a></li>
         </ul>
         <ul class="bar-right">
             <% if(session.usuario !== undefined){ %>
@@ -22,7 +22,7 @@
                 <li class="botton-sidebar"><a href="loggout-aux">Cerrar Sesion</a></li>
             <% }else{ %>
                 <li><a class="btn" href="#">Registrarse</a></li>
-                <li><a class="btn" href="#">Iniciar Sesion</a></li>
+                <li><a class="btn" href="ingresar">Iniciar Sesion</a></li>
             <% } %>
         </ul>
     </div>

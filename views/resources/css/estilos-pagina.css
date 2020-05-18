@@ -1,0 +1,166 @@
+:root {
+    --generalColorBackground: #f4f4f4;
+    --whiteColor: #fff;
+    --whiteColorTransparent: rgba(255, 255, 255, .5);
+    --darkColor: #343a40;
+    --whiteColorSecondary: #ddd;
+    --darkColorTransparent: rgba(52, 58, 64, .5);
+    --greenJungle: #59932b;
+    --greenJungleSecundary: #6ea838;
+    --greenJungleTransparent: rgba(89, 147, 43, .5);
+    --redColor:#d62d0e;
+    --redColorSecondary: #d1442a;
+}
+
+body, html{
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    width: 80%;
+    box-sizing: border-box;
+    padding: 20px 0;
+    margin: auto;
+}
+
+/*background classes*/
+
+.background-image-1{
+    background-image: url("../images/foto1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.background-image-2{
+    background-image: url("../images/foto2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.background-image-3{
+    background-image: url("../images/foto3.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.background-pattern-lines{
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2359932b' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.background-dark{
+    background-color: var(--darkColor);
+    color: var(--whiteColor);
+}
+
+.background-white{
+    background-color: var(--whiteColorSecondary);
+    color: var(--darkColor);
+}
+
+/*sizong classes*/
+
+.full-size{
+    height: 100%;
+    width: 100%;
+}
+
+/*flex classes*/
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+}
+
+.flex-full-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*btn classes*/
+
+.btn{
+    cursor: pointer;
+    border-radius: 5px;
+    border-style: none;
+    padding: 10px;
+    font-weight: bold;
+    margin: 1em 0;
+}
+
+.btn-success{
+    background-color:var(--greenJungle);
+    color: var(--whiteColor);
+}
+
+.btn-success:hover{
+    background-color: var(--greenJungleSecundary);
+}
+
+.btn-warning{
+    background-color:var(--redColor);
+    color: var(--whiteColor);
+}
+
+.btn-warning:hover{
+    background-color: var(--redColorSecondary);
+}
+
+/*card classes*/
+
+.card{
+    display: block;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+/*padding classes*/
+.padding-10{
+
+}
+
+/*form group classes*/
+.form-group{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.form-group input{
+    border-style: none;
+    border-radius: 5px;
+    font-size: 1.5em;
+    margin: 10px 0;
+    padding-left: 10px;
+}
+
+
+/*text classes*/
+.text-center{
+    text-align: center;
+}
+.text-muted{
+    color:var(--whiteColorTransparent)
+}
+
+@media (max-width: 400px){
+
+    .card{
+        width: 250px;
+    }
+}

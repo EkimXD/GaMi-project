@@ -7,13 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/png" href="/images/GaMicono.png"/>
     <!--    estilos de la pagina-->
-    <link rel="stylesheet" type="text/css" href="/css/estilos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <% try{
+    estilos.forEach(a=>{
+    %>
+    <link rel="stylesheet" type="text/css" href=<%= a %>>
+    <%
+    });
+    } catch (e) {
+        console.log(e);
+    } %>
     <!--    Scripts de la pagina-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="js/behavor.js"></script>
+    <% try{
+    scripts.forEach(a=>{
+    %>
+        <script src=<%=a%>></script>
+    <%
+    });
+    } catch (e) {
+        console.log(e);
+    } %>
     <title><%= title %></title>
 </head>
 <body>
