@@ -1,7 +1,7 @@
 import {Column, Entity, Index, JoinTable, ManyToMany, ManyToOne, OneToMany, PrimaryGeneratedColumn} from 'typeorm';
 import {RolEntity} from '../rol/rol.entity';
 
-@Entity('usuario_web')
+@Entity('usuario')
 export class UsuarioEntity {
     @PrimaryGeneratedColumn({
         type: 'int',
@@ -18,6 +18,14 @@ export class UsuarioEntity {
         comment: 'Nombre en la tabla usuario',
     })
     nombre: string;
+
+    @Column({
+        type: 'varchar',
+        nullable: false,
+        name: 'apellido_usuario',
+        comment: 'Apellido en la tabla usuario',
+    })
+    apellido: string;
 
     @Column({
         type: 'varchar',
@@ -47,7 +55,7 @@ export class UsuarioEntity {
         name: 'nick_usuario',
         comment: 'nick en la tabla usuario',
     })
-    nick?: string;
+    nick: string;
 
     @Index({
         unique: false,
@@ -58,7 +66,7 @@ export class UsuarioEntity {
         name: 'contrasenia_usuario',
         comment: 'contraseña en la tabla usuario',
     })
-    contrasena?: string;
+    contrasena: string;
 
 
     @ManyToMany(

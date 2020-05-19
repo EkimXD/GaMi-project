@@ -22,6 +22,21 @@ export class AppController {
         locals
     )
   }
+
+  @Get('crear-usuario')
+  crear_usuario(
+      @Res()res,
+  ){
+    let locals={
+      title:"GaMi - Crear usuario"
+    }
+    res.render(
+        'rutas/crear-usuario/crear-usuario',
+        locals
+    )
+  }
+
+
   @Get('index')
   index(
       @Res()res,

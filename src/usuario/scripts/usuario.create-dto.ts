@@ -1,4 +1,4 @@
-import { IsDateString, IsEmail, IsNotEmpty, IsString, MaxLength, MinLength } from 'class-validator';
+import {IsDateString, IsEmail, IsNotEmpty, IsString, IsUrl, MaxLength, MinLength} from 'class-validator';
 
 export class UsuarioCreateDto {
 
@@ -13,17 +13,13 @@ export class UsuarioCreateDto {
     @MaxLength(10)
     @MinLength(3)
     apellido: string;
+    // @IsUrl()
+    // foto?: string;
 
     @IsNotEmpty()
     @IsString()
     @IsEmail()
     correo: string;
-
-
-    telefono?: string;
-
-    // @IsDateString()
-    fecha_nac?: string;
 
     @IsNotEmpty()
     @MinLength(5)

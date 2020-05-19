@@ -1,0 +1,65 @@
+<%- include ('../../shared/header',{estilos:['/css/estilos-pagina.css','https://fonts.googleapis.com/css2?family=Roboto&display=swap','https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'],scripts:[]}) %>
+
+<div class="background-image-2 full-size">
+    <div class="vertical-size flex-no-wrap">
+        <div class="full-size flex-center-vertical">
+            <div class="big-card">
+                <form>
+                    <h1 class="text-center">Registro</h1>
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej: Michael" required>
+                        <small class="text-muted">Ingrese su nombre</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" name="apellido" placeholder="Ej: Padilla" required>
+                        <small class="text-muted">Ingrese su Apellido</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="nick">Nick</label>
+                        <input type="text" id="nick" name="nick" placeholder="Ej: Mich" required>
+                        <small class="text-muted">Ingrese su nick</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo</label>
+                        <input type="email" id="correo" name="correo" placeholder="Ej: correo@correo.com" required>
+                        <small class="text-muted">Ingrese su correo</small>
+                    </div>
+                    <div class="form-group flex-center">
+                        <label for="foto">Foto</label>
+                        <input type="file" id="foto" name="foto">
+                        <small class="text-muted">suba una foto</small>
+                    </div>
+                    <button class="btn btn-success">Siguiente <i class="fas fa-angle-double-right"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="full-size flex-center-vertical">
+            <div class="big-card">
+                <form>
+                    <h1 class="text-center">Codigo</h1>
+                    <p>Se ha enviado un codigo de verificacion a su correo electronico, por favor ingreselo a
+                        continuacion</p>
+                    <div class="form-group">
+                        <label for="codigo">Codigo</label>
+                        <input type="number" id="codigo" name="codigo" placeholder="XXXXXXXX" required>
+                    </div>
+                    <button class="btn btn-success"><i class="fas fa-angle-double-left"></i> Anterior</button>
+                    <button class="btn btn-success">Siguiente <i class="fas fa-angle-double-right"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="full-size flex-center-vertical">
+            <div class="big-card">
+                <form>
+                    <h1 class="text-center">Gracias</h1>
+                    <p>Por parte del equipo de GaMi te agradecemos y damos la bienvenida a nuestra comunidad</p>
+                    <button class="btn btn-success">Genial!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include ('../../shared/end-document',{stilos:['css/estilos-pagina.css'],scripts:[]}) %>

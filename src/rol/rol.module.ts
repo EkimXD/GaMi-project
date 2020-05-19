@@ -25,21 +25,21 @@ import {RolService} from "./rol.service";
     ],
 })
 export class RolModule {
-  constructor(
-    private readonly _rolService:RolService,
-  ) {
-    let roles=new RolEntity();
-    roles.nombre="VD";
-    roles.descripcion="Vendedor";
-    _rolService.crearUno(roles);
-    roles=new RolEntity();
-    roles.nombre="CD";
-    roles.descripcion="Comprador";
-    _rolService.crearUno(roles);
-    roles=new RolEntity();
-    roles.nombre="AD";
-    roles.descripcion="Administrador";
-    _rolService.crearUno(roles);
-  }
+  // constructor(
+  //   private readonly _rolService:RolService,
+  // ) {
+  //   let roles=new RolEntity();
+  //   roles.nombre="VD";
+  //   roles.descripcion="Vendedor";
+  //   _rolService.crearUno(roles);
+  //   roles=new RolEntity();
+  //   roles.nombre="CD";
+  //   roles.descripcion="Comprador";
+  //   _rolService.crearUno(roles);
+  //   roles=new RolEntity();
+  //   roles.nombre="AD";
+  //   roles.descripcion="Administrador";
+  //   _rolService.crearUno(roles);
+  // }
 
 }

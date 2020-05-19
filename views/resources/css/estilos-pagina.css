@@ -29,6 +29,10 @@ body, html{
     margin: auto;
 }
 
+p{
+    margin: 20px 0;
+}
+
 /*background classes*/
 
 .background-image-1{
@@ -66,11 +70,25 @@ body, html{
     color: var(--darkColor);
 }
 
+.no-background{
+    background:none;
+}
 /*sizong classes*/
 
 .full-size{
     height: 100%;
     width: 100%;
+}
+
+.vertical-size{
+    height: 100%;
+    width: 450px;
+    overflow:hidden;
+    padding: 20px;
+    box-sizing: border-box;
+    color: var(--whiteColor);
+    font-weight: bold;
+    text-shadow: 2px 2px var(--darkColor);
 }
 
 /*flex classes*/
@@ -85,12 +103,21 @@ body, html{
     justify-content: center;
 }
 
+.flex-center-vertical{
+    display: flex;
+    align-items: center;
+}
+
 .flex-full-center{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.flex-no-wrap{
+    display: flex;
+    flex-wrap: nowrap;
+}
 /*btn classes*/
 
 .btn{
@@ -126,6 +153,13 @@ body, html{
     display: block;
     border-radius: 5px;
     padding: 20px;
+}
+
+.big-card{
+    display: block;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 50px;
 }
 
 /*padding classes*/
