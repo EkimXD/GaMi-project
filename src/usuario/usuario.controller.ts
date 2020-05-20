@@ -53,6 +53,36 @@ export class UsuarioController {
         }
     }
 
+    @Get('buscar')
+    buscar(
+        @Query('correo') correo:string,
+        @Query('nick') nick:string,
+        @Query('nombre') nombre:string,
+        @Query('apellido') apellido:string,
+    ){
+        let where=new Array();
+        if(correo){
+            where.push({
+                correo
+            });
+        }
+        if(nick){
+            where.push({
+                nick
+            });
+        }
+        if(nombre){
+            where.push({
+                nombre
+            });
+        }
+        if(apellido){
+            where.push({
+                apellido
+            });
+        }
+        return this._usuarioService.buscar(where);
+    }
 
     @Get('prueba')
     async prueba(

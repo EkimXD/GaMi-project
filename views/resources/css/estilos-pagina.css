@@ -162,6 +162,19 @@ p{
     margin: 50px;
 }
 
+/*Movimiento*/
+
+.move-left{
+    position: absolute;
+    left: -450px;
+}
+
+.move-0{
+    position: relative;
+    left: 0;
+    transition: left .3s;
+}
+
 /*padding classes*/
 .padding-10{
 
@@ -172,7 +185,7 @@ p{
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 10px 0;
+    margin: 10px;
 }
 
 .form-group input{
