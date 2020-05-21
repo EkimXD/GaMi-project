@@ -1,38 +1,38 @@
-document.addEventListener('DOMContentLoaded', init)
+// import {validate} from "class-validator";
+document.addEventListener('DOMContentLoaded', init);
 
-class getInformation {
+function init() {
+    const siguiente = document.getElementById('btn-siguiente');
+    const anterior = document.getElementById('btn-anterior');
+    const finalizar = document.getElementById('btn-finalizar');
 
-}
-
-function init(){
-    const siguiente=document.getElementById('btn-siguiente');
-    const anterior=document.getElementById('btn-anterior');
-    const finalizar=document.getElementById('btn-finalizar');
-    
     siguiente.addEventListener('click', validarInput);
-    anterior.addEventListener('click',irAnterior);
-    finalizar.addEventListener('click',validarFinalizar);
+    anterior.addEventListener('click', irAnterior);
+    finalizar.addEventListener('click', validarFinalizar);
 }
 
-async function validarInput(e) {
+async function validarInput() {
+    const anterior = document.getElementById('btn-anterior');
+    const siguiente = document.getElementById('btn-siguiente');
+    const correo = document.getElementById('correo');
+    const nick = document.getElementById('nick');
 
-    const siguiente=document.getElementById('btn-siguiente');
-    const correo=document.getElementById('correo').value;
-    const nick=document.getElementById('nick').value;
-
-    const response=await fetch(`usuario/buscar?correo=${correo}&nick${nick}`);
-    console.log(response.JSON);
-    //     .then(response=>{
-    //
-    //         siguiente.parentElement.parentElement.classList.toggle('move-left');
-    //     }).catch(error=>{
-    //
-    // });
-
+    const validacion=new Validation();
+    const existen=await validacion.buscarExistencia([correo, nick],'usuario');
+    if(!existen) {
+        siguiente.parentElement.parentElement.classList.add('move-left');
+        anterior.parentElement.parentElement.classList.remove('move-left');
+        console.log(await fetch('usuario/sent-email?id=1234567890poiuytrewq'));
+    }
 }
+
+
 
 function irAnterior() {
-
+    const anterior = document.getElementById('btn-anterior').parentElement.parentElement;
+    const siguiente = document.getElementById('btn-siguiente').parentElement.parentElement;
+    anterior.classList.add('move-left');
+    siguiente.classList.remove('move-left');
 }
 
 function validarFinalizar() {

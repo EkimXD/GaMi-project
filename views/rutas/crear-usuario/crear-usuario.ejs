@@ -1,14 +1,14 @@
-<%- include ('../../shared/header',{estilos:['/css/estilos-pagina.css','https://fonts.googleapis.com/css2?family=Roboto&display=swap','https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'],scripts:['js/create-user.js']}) %>
+<%- include ('../../shared/header',{estilos:['/css/estilos-pagina.css','https://fonts.googleapis.com/css2?family=Roboto&display=swap'],scripts:['js/create-user.js','js/behavior.js','js/validation.js']}) %>
 
-<div class="background-image-2 full-size">
-    <div class="vertical-size flex-no-wrap">
+<div class="background-image-3 full-size">
+    <div class="vertical-size flex-no-wrap background-pattern-lines background-dark">
         <div class="full-size flex-center-vertical">
             <div class="big-card">
                 <form>
                     <h1 class="text-center">Registro</h1>
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Ej: Michael" required>
+                        <input class="animate__bounce" type="text" id="nombre" name="nombre" placeholder="Ej: Michael" required>
                         <small class="text-muted">Ingrese su nombre</small>
                     </div>
                     <div class="form-group">
@@ -17,7 +17,7 @@
                         <small class="text-muted">Ingrese su Apellido</small>
                     </div>
                     <div class="form-group">
-                        <label for="nick">Nick</label>
+                        <label for="nick">Nombre de usuario</label>
                         <input type="text" id="nick" name="nick" placeholder="Ej: Mich" required>
                         <small class="text-muted">Ingrese su nick</small>
                     </div>
@@ -31,7 +31,7 @@
 <!--                        <input type="file" id="foto" name="foto">-->
 <!--                        <small class="text-muted">suba una foto</small>-->
 <!--                    </div>-->
-                    <button id="btn-siguiente" class="btn btn-success">Siguiente <i class="fas fa-angle-double-right"></i></button>
+                    <button type="button" id="btn-siguiente" class="btn btn-success">Siguiente <i class="fas fa-angle-double-right"></i></button>
                 </form>
             </div>
         </div>
@@ -46,7 +46,7 @@
                         <input type="number" id="codigo" name="codigo" placeholder="XXXXXXXX" required>
                     </div>
                     <button id="btn-anterior" class="btn btn-success"><i class="fas fa-angle-double-left"></i> Anterior</button>
-                    <button id="btn-finalizar" class="btn btn-success">Finalizar</i></button>
+                    <button id="btn-finalizar" class="btn btn-success">Finalizar</button>
                 </form>
             </div>
         </div>

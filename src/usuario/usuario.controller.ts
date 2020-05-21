@@ -29,7 +29,7 @@ export class UsuarioController {
     @Post()
     async crearUsuario(
         @Body() usuario: UsuarioEntity,
-    ): Promise<UsuarioEntity|string> {
+    ): Promise<UsuarioEntity | string> {
         const validacion = await new UsuarioValidation().validarNuevo(usuario);
         if (validacion.resultado) {
             const rol = await this._rolService.encontrarUno(1);
@@ -42,12 +42,12 @@ export class UsuarioController {
 
     @Post('actualizar')
     async actualizar(
-        @Param('id')id:string,
-        @Body() usuario:UsuarioEntity,
-    ):Promise<UsuarioEntity|string>{
+        @Param('id')id: string,
+        @Body() usuario: UsuarioEntity,
+    ): Promise<UsuarioEntity | string> {
         const validacion = await new UsuarioValidation().validarNuevo(usuario);
         if (validacion.resultado) {
-            return this._usuarioService.actualizarUno(+id,usuario);
+            return this._usuarioService.actualizarUno(+id, usuario);
         } else {
             return validacion.detalles.toString();
         }
@@ -55,28 +55,28 @@ export class UsuarioController {
 
     @Get('buscar')
     buscar(
-        @Query('correo') correo:string,
-        @Query('nick') nick:string,
-        @Query('nombre') nombre:string,
-        @Query('apellido') apellido:string,
-    ){
-        let where=new Array();
-        if(correo){
+        @Query('correo') correo: string,
+        @Query('nick') nick: string,
+        @Query('nombre') nombre: string,
+        @Query('apellido') apellido: string,
+    ) {
+        let where = new Array();
+        if (correo) {
             where.push({
                 correo
             });
         }
-        if(nick){
+        if (nick) {
             where.push({
                 nick
             });
         }
-        if(nombre){
+        if (nombre) {
             where.push({
                 nombre
             });
         }
-        if(apellido){
+        if (apellido) {
             where.push({
                 apellido
             });
@@ -84,10 +84,48 @@ export class UsuarioController {
         return this._usuarioService.buscar(where);
     }
 
-    @Get('prueba')
-    async prueba(
-        @Res() res,
+    @Get('verify-data')
+    async verify(
+        @Query('correo') correo: string,
+        @Query('nick') nick: string,
     ) {
+        const where = [
+            {
+                correo
+            }, {
+                nick
+            }
+        ];
 
+        const result=await this._usuarioService.buscar(where);
+        console.log(result);
+        return result;
+    }
+
+    @Get('sent-email')
+    sentEmail(
+        @Query('id') id:string,
+    ):string{
+        if(id==='1234567890poiuytrewq'){
+            const sendmail = require('sendmail')();
+            sendmail({
+                from: 'no-reply@gami.tk',
+                to: 'miguel.aguilar01@epn.edu.ec',
+                subject: 'test sendmail',
+                html: '<h1>Gracias por usar el servicio</h1><p>Su clave es 1234</p>',
+            }, function(err, reply) {
+                console.log(err && err.stack);
+                console.dir(reply);
+            });
+            return '1234';
+        }
+
+    }
+
+    @Get('prueba')
+    prueba(
+
+    ) {
+        return 'lol'
     }
 }

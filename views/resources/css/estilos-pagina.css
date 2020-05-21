@@ -70,6 +70,12 @@ p{
     color: var(--darkColor);
 }
 
+.background-red{
+    background-color: var(--redColorSecondary);
+    color: var(--whiteColor);
+    transition: background-color .5s,color .8s;
+}
+
 .no-background{
     background:none;
 }
@@ -126,7 +132,7 @@ p{
     border-style: none;
     padding: 10px;
     font-weight: bold;
-    margin: 1em 0;
+    margin: 1em 10px;
 }
 
 .btn-success{
@@ -160,6 +166,7 @@ p{
     border-radius: 5px;
     padding: 20px;
     margin: 50px;
+    width: 350px;
 }
 
 /*Movimiento*/
@@ -204,10 +211,23 @@ p{
 .text-muted{
     color:var(--whiteColorTransparent)
 }
+.text-muted-red{
+    color: #d62d0e;
+    text-shadow: none;
+    text-decoration: underline;
+}
 
-@media (max-width: 400px){
+@media (max-width: 500px){
 
     .card{
         width: 250px;
+    }
+
+    .vertical-size{
+        width: 100%;
+    }
+
+    .big-card{
+        margin: 0;
     }
 }
